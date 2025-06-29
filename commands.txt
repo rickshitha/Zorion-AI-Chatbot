@@ -1,0 +1,19 @@
+The **'U'** you see next to your files in the **VS Code Explorer** comes from **Git** and stands for **"Untracked"**. This means that the files have not yet been added to the Git repository — Git is aware of them, but they are not being tracked for changes.
+
+### Here's how to fix it:
+
+If you want Git to start tracking those files, do the following:
+
+1. **Stage the files**:
+   ```bash
+   git add .
+   ```
+
+2. **Commit the files**:
+   ```bash
+   git commit -m "Add initial backend and frontend files"
+   ```
+
+After this, the **'U'** will disappear and change depending on the file's status (`M` for modified, etc.).
+
+Let me know if you want to ignore any files (like `.env`) — I can help you update your `.gitignore`.

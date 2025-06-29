@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot🤖</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      animation: bgPulse 10s infinite alternate;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+
+    @keyframes bgPulse {
+      0% { background: linear-gradient(135deg, #c3e0ff, #f8f0ff); }
+      100% { background: linear-gradient(135deg, #e0f7fa, #fbeeff); }
+    }
+
+    .chat-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease;
+    }
+
+    .chat-container:hover {
+      transform: scale(1.01);
+    }
+
+    .messages {
+      height: 400px;
+      overflow-y: auto;
+      padding: 10px;
+      border: 1px solid #2d3748;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      background: rgba(23, 23, 23, 0.9);
+      color: #e2e8f0;
+    }
+
+    .message {
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+      animation: bubbleEnter 0.4s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes bubbleEnter {
+      from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .user {
+      background: linear-gradient(to right, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.25));
+      color: #cbd5e1;
+      text-align: right;
+      border: 1px solid rgba(147, 197, 253, 0.3);
+    }
+
+    .bot {
+      background: linear-gradient(to right, rgba(139, 92, 246, 0.25), rgba(99, 102, 241, 0.25));
+      color: #e0e7ff;
+      text-align: left;
+      border: 1px solid rgba(196, 181, 253, 0.3);
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    input {
+      width: 70%;
+      border-radius: 8px;
+      border: 1px solid #4b5563;
+      margin-right: 10px;
+      background-color: rgba(31, 41, 55, 0.9);
+      color: #f1f5f9;
+      transition: box-shadow 0.3s;
+    }
+
+    input::placeholder {
+      color: #9ca3af;
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 8px #6366f1;
+    }
+
+    button {
+      background: linear-gradient(to right, #1e40af, #3b82f6);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #1d4ed8, #2563eb);
+    }
+
+    h2 {
+      text-align: center;
+      color: #93c5fd;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    .dots {
+      display: inline-block;
+      margin-left: 5px;
+    }
+
+    .dots span {
+      animation: blink 1.4s infinite;
+      font-weight: bold;
+      color: #93c5fd;
+      font-size: 1.2rem;
+    }
+
+    .dots span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .dots span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes blink {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <video id="bg-video" autoplay muted loop>
+    <source src="assets/chatbotbg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay"></div>
+
+  <div class="chat-container">
+    <h2>🤖 Zorion AI Chatbot</h2>
+    <div class="messages" id="chatbox">
+      <!-- Animated bot placeholder -->
+      <div id="bot-placeholder" class="message bot">
+        🤖 <em>SkillVerse AI is warming up to help you...</em>
+        <span class="dots"><span>.</span><span>.</span><span>.</span></span>
+      </div>
+    </div>
+
+    <input type="text" id="userInput" placeholder="Ask a question about your studies...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🤖 Zorion AI Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    video.background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .animated-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #60a5fa, #a78bfa);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInTitle 2s ease-in-out;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 👈 Added for visibility */
+    }
+    
+    
+
+    @keyframes fadeInTitle {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1.1rem;
+      margin: 12px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: linear-gradient(to right, #3b82f6, #6366f1);
+      color: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      background: linear-gradient(to right, #2563eb, #7c3aed);
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Background Video -->
+  <video class="background-video" autoplay muted loop>
+    <source src="assets/indexbg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <h1 class="animated-title">🤖 Zorion AI Chatbot - Smart Study Planner</h1>
+  <button onclick="location.href='chatbot.html'">🧠 Open Chatbot</button>
+  <button onclick="location.href='scheduler.html'">📄 PDF Summarizer</button>
+</body>
+</html>
