@@ -6,8 +6,6 @@ An advanced AI-powered chatbot built using Python, Gemini API, and a sleek HTML/
 
 🗂️ PDF Syllabus Summarization that auto-generates structured notes and study schedules
 
-🎤 Voice Query Support for natural, hands-free interactions
-
 📈 Response Ranking System to enhance reply accuracy using text similarity techniques
 
 💡 Modular Backend in Python, cleanly separating functionality for maintainability
