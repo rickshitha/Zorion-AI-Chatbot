@@ -1,30 +1,31 @@
-# 🤖 Zorion AI Chatbot
+🧠 Zorion AI Chatbot
+An advanced AI-powered chatbot built using Python, Gemini API, and a sleek HTML/CSS/JavaScript frontend — designed to revolutionize how users interact with information through voice, document understanding, and personalized study guidance.
 
-Zorion is a multi-functional, intelligent chatbot built using **Python**, **Streamlit**, and the **Gemini API**. Designed to enhance productivity and engagement, Zorion offers a suite of smart features like:
+✨ Key Highlights
+🤖 Conversational AI Engine powered by Gemini for intelligent, real-time responses
 
-- ✈️ **Travel Planning**
-- 📚 **Syllabus Summarization**
-- 🎙️ **Voice Query Handling**
-- 📆 **Smart Study Scheduling**
+🗂️ PDF Syllabus Summarization that auto-generates structured notes and study schedules
 
-This AI chatbot is built with a modular architecture and dynamic UI that ensures **real-time performance**, **personalized experiences**, and **high user satisfaction**. Zorion is perfect for students, travelers, and learners who want instant, intelligent assistance.
+🎤 Voice Query Support for natural, hands-free interactions
 
-> 🚀 Experience an AI that understands you – not just answers you.
+📈 Response Ranking System to enhance reply accuracy using text similarity techniques
 
----
+💡 Modular Backend in Python, cleanly separating functionality for maintainability
 
-### ✅ Key Features
-- 🔍 Gemini-powered conversational intelligence with accurate, real-time responses
-- 🧠 NLP-driven text similarity & ranking to ensure context-aware replies
-- 🎨 Interactive Streamlit UI with session tracking, widgets, and live image previews
-- 🔊 Voice query support for natural, hands-free interaction
-- 📆 Auto-generated smart schedules from uploaded syllabus content
+🎨 Fully Customized Frontend using HTML, CSS, and JavaScript for a dynamic, user-friendly experience
 
----
+📌 Technologies Used
+Frontend: HTML, CSS, JavaScript
 
-### 📂 Technologies Used
-- Python
-- Gemini API
-- Streamlit
-- gTTS (for voice output)
-- Text Similarity Libraries
+Backend: Python
+
+API: Gemini API
+
+Voice Output: gTTS (Google Text-to-Speech)
+
+Others: Text similarity metrics, session-based data handling
+
+💬 Project Vision
+Zorion isn’t just a chatbot — it’s a smart assistant that analyzes documents, guides students, and speaks back to them with meaningful, well-ranked replies. It combines natural conversation flow with deep learning from user queries to deliver impactful results.
+
+🚀 "Zorion AI – Your smart companion for voice-driven study guidance and intelligent document interaction."
